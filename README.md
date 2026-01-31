@@ -1,4 +1,7 @@
 # bevy-i18n-lint
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/pas7studio)
+
+[Donate via PayPal](https://www.paypal.com/ncp/payment/KDSSNKK8REDM8)
 
 Lint Bevy localization files (`.json` / `.ron`) for:
 - missing keys (compared to base language)
