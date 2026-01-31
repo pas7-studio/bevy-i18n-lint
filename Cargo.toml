@@ -1,0 +1,24 @@
+[package]
+name = "bevy-i18n-lint"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "CLI linter for Bevy localization files (json/ron): missing keys, extra keys, placeholder mismatches."
+repository = "https://github.com/pas7studio/bevy-i18n-lint"
+readme = "README.md"
+homepage = "https://pas7.com.ua/"
+keywords = ["bevy", "i18n", "localization", "linter", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ron = "0.8"
+walkdir = "2"
+
+[dev-dependencies]
+tempfile = "3"
+serde_json = "1"

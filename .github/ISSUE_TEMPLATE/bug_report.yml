@@ -1,0 +1,105 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: input
+    id: version
+    attributes:
+      label: bevy-i18n-lint version
+      description: What version of bevy-i18n-lint are you using?
+      placeholder: e.g., 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: rust-version
+    attributes:
+      label: Rust version
+      description: What version of Rust are you using?
+      placeholder: Run `rustc --version`
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      description: On which operating system did you encounter this issue?
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: When I run bevy-i18n-lint with the following command...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior
+      value: |
+        1. Run '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: I expected bevy-i18n-lint to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+      placeholder: Instead, it...
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output/error messages
+      description: Copy and paste any relevant output or error messages here
+      render: text
+      placeholder: |
+        $ bevy-i18n-lint ...
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration
+      description: If applicable, share your configuration file
+      render: code
+      placeholder: i18n configuration...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+      render: markdown
+      placeholder: Screenshots, sample files, etc.

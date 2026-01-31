@@ -1,0 +1,90 @@
+# bevy-i18n-lint - LLM Context File
+
+## Project Overview
+
+bevy-i18n-lint is a CLI tool for linting and validating i18n (internationalization) resources in Bevy game engine projects. It ensures consistency and correctness of localization files across different languages.
+
+## Core Purpose
+
+The tool helps developers:
+- Detect missing translations across languages
+- Identify inconsistent placeholder usage
+- Validate i18n file formats
+- Enforce consistency rules
+- Provide CI-friendly output for automated checks
+
+## Architecture
+
+- **Language**: Rust
+- **Package Manager**: Cargo
+- **CLI Framework**: clap
+- **Output Formats**: JSON, human-readable text
+- **Configuration**: CLI flags and potential config files
+
+## Key Features
+
+1. Multi-language translation validation
+2. Placeholder consistency checking
+3. Missing key detection
+4. JSON output for CI/CD integration
+5. Deterministic and stable output
+6. Extensible check system
+
+## File Structure
+
+```
+bevy-i18n-lint/
+├── src/
+│   ├── main.rs    # CLI entry point
+│   └── lib.rs     # Core library with linting logic
+├── Cargo.toml     # Project dependencies
+├── README.md      # User documentation
+├── CONTRIBUTING.md # Contribution guidelines
+├── AGENTS.md      # AI agent rules and guidelines
+└── LICENSE        # MIT/Apache-2.0 dual license
+```
+
+## Agent Rules Summary
+
+From AGENTS.md:
+- Always run: `cargo fmt`, `cargo clippy -D warnings`, `cargo test`
+- Preserve stable CLI flags and output formats
+- Keep output deterministic (sorted keys, stable ordering)
+- No breaking changes without major version bump
+- Keep dependencies minimal
+- Any new output fields must be additive
+
+## CLI Behavior
+
+- **Exit Codes**: Non-zero on errors, zero on success
+- **Output**: Human-readable by default, JSON with flags
+- **Flags**: Use flags to enable/disable specific checks
+- **Performance**: Optimized for CI/CD workflows
+
+## Code Conventions
+
+- Follow Rust best practices and idiomatic code
+- Use meaningful variable and function names
+- Add documentation comments for public APIs
+- Write tests for new functionality
+- Run clippy with warnings as errors
+
+## Testing
+
+```bash
+cargo test
+cargo clippy -- -D warnings
+cargo fmt
+```
+
+## Contributing
+
+See CONTRIBUTING.md for detailed contribution guidelines.
+
+## Support
+
+For issues and questions, use GitHub Issues and Discussions.
+
+## License
+
+Dual licensed under MIT and Apache-2.0. See LICENSE for details.
