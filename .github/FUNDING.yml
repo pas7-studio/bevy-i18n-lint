@@ -1,13 +1,6 @@
+# File: .github/FUNDING.yml
 # These are supported funding model platforms
 
-github: [pas7studio]
-patreon: # Your Patreon username
-open_collective: # Your Open Collective username
-ko_fi: # Your Ko-fi username
-tidelift: # Your Tidelift platform name
-community_bridge: # Your Community Bridge project name
-liberapay: # Your Liberapay username
-issuehunt: # Your IssueHunt username
-otechie: # Your Otechie username
-custom: # Custom sponsorship URL(s)
-  - https://example.com/sponsor
+ko_fi: pas7studio
+custom:
+  - https://www.paypal.com/ncp/payment/KDSSNKK8REDM8
