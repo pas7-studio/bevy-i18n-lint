@@ -1,10 +1,10 @@
 [package]
 name = "bevy-i18n-lint"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "CLI linter for Bevy localization files (json/ron): missing keys, extra keys, placeholder mismatches."
-repository = "https://github.com/pas7studio/bevy-i18n-lint"
+repository = "https://github.com/pas7-studio/bevy-i18n-lint"
 readme = "README.md"
 homepage = "https://pas7.com.ua/"
 keywords = ["bevy", "i18n", "localization", "linter", "cli"]

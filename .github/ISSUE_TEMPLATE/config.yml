@@ -1,11 +1,12 @@
+# File: .github/ISSUE_TEMPLATE/config.yml
 blank_issues_enabled: true
 contact_links:
   - name: 📖 Documentation
-    url: https://github.com/pas7studio/bevy-i18n-lint#readme
+    url: https://github.com/pas7-studio/bevy-i18n-lint#readme
     about: Check the documentation before asking a question
   - name: 💬 GitHub Discussions
-    url: https://github.com/pas7studio/bevy-i18n-lint/discussions
+    url: https://github.com/pas7-studio/bevy-i18n-lint/discussions
     about: Ask questions and discuss with the community
   - name: 🐛 Report a security vulnerability
-    url: https://github.com/pas7studio/bevy-i18n-lint/security/advisories
+    url: https://github.com/pas7-studio/bevy-i18n-lint/security/advisories
     about: Please report security vulnerabilities privately

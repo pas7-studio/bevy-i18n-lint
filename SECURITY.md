@@ -15,7 +15,7 @@ If you discover a security vulnerability in bevy-i18n-lint, please report it pri
 ### How to Report
 
 1. **Send a private report via GitHub Security Advisories**
-   - Go to [Security Advisories](https://github.com/pas7studio/bevy-i18n-lint/security/advisories)
+   - Go to [Security Advisories](https://github.com/pas7-studio/bevy-i18n-lint/security/advisories)
    - Click "Report a vulnerability"
    - Fill in the details with as much information as possible
 

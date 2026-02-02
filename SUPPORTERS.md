@@ -1,3 +1,4 @@
+<!-- File: SUPPORTERS.md -->
 # Supporters
 
 bevy-i18n-lint is a community-driven project. We'd like to thank everyone who has contributed to its success.
@@ -6,7 +7,7 @@ bevy-i18n-lint is a community-driven project. We'd like to thank everyone who ha
 
 Thank you to all the developers who have contributed code, bug fixes, and features to this project.
 
-See the [Contributors](https://github.com/pas7studio/bevy-i18n-lint/graphs/contributors) page on GitHub for the full list.
+See the [Contributors](https://github.com/pas7-studio/bevy-i18n-lint/graphs/contributors) page on GitHub for the full list.
 
 ## Financial Supporters
 
