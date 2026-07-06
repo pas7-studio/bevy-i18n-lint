@@ -27,8 +27,10 @@ The tool helps developers:
 2. Placeholder consistency checking
 3. Missing key detection
 4. JSON output for CI/CD integration
-5. Deterministic and stable output
-6. Extensible check system
+5. Project config file (bevy-i18n-lint.toml / .json) with ignore_keys, skip_languages, custom placeholder patterns
+6. Explicit --config path, --no-ignore bypass, --init config generator
+7. Deterministic and stable output
+8. Extensible check system
 
 ## File Structure
 
@@ -58,7 +60,8 @@ From AGENTS.md:
 
 - **Exit Codes**: Non-zero on errors, zero on success
 - **Output**: Human-readable by default, JSON with flags
-- **Flags**: Use flags to enable/disable specific checks
+- **Flags**: Use flags to enable/disable specific checks; short flags: -d, -b, -s, -f, -e, -p
+- **Config**: Auto-discovered bevy-i18n-lint.toml / .json; override via --config; generate via --init
 - **Performance**: Optimized for CI/CD workflows
 
 ## Code Conventions

@@ -42,12 +42,36 @@ bevy-i18n-lint --help
 ```
 
 Available flags:
-- `--dir <PATH>`: Directory containing locale files (default: `assets/i18n`)
-- `--base <LANG>`: Base language code (default: `en`)
-- `--strict`: Exit with error on any issues (missing, extra, or placeholder mismatches)
-- `--fail-on-extra`: Exit with error on extra keys
-- `--fail-on-placeholder`: Exit with error on placeholder mismatches
-- `--format <FORMAT>`: Output format (default: `text`, options: `json`, `github`)
+- `-d, --dir <PATH>`: Directory containing locale files (default: `assets/i18n`)
+- `-b, --base <LANG>`: Base language code (default: `en`)
+- `-s, --strict`: Exit with error on any issues (missing, extra, or placeholder mismatches)
+- `-e, --fail-on-extra`: Exit with error on extra keys
+- `-p, --fail-on-placeholder`: Exit with error on placeholder mismatches
+- `-f, --format <FORMAT>`: Output format (default: `text`, options: `json`, `github`)
+- `--config <PATH>`: Explicit path to config file
+- `--no-ignore`: Bypass `ignore_keys` from config
+- `--init`: Generate a default `bevy-i18n-lint.toml` config file
+
+### Configuration file
+
+Create `bevy-i18n-lint.toml` (or `bevy-i18n-lint.json`) in your project root to codify
+project-specific decisions — useful for agents and CI:
+
+```toml
+# bevy-i18n-lint.toml
+# Key patterns to ignore (supports * glob)
+ignore_keys = ["deprecated.*", "experimental_*"]
+# Languages to skip entirely
+skip_languages = ["zz"]
+# Custom regex for placeholder detection
+placeholder_pattern = "\\(([A-Za-z_]+)\\)"
+# Override CLI flags
+strict = false
+fail_on_extra = true
+fail_on_placeholder = true
+```
+
+All fields are optional. Config values override CLI flags.
 
 ### Examples
 
@@ -85,6 +109,24 @@ Fail only on missing keys:
 
 ```bash
 bevy-i18n-lint --fail-on-placeholder=false --fail-on-extra=false
+```
+
+Explicit config file:
+
+```bash
+bevy-i18n-lint --config .ci/bevy-i18n-lint.toml
+```
+
+Bypass ignore patterns temporarily:
+
+```bash
+bevy-i18n-lint --no-ignore
+```
+
+Generate a default config file:
+
+```bash
+bevy-i18n-lint --init
 ```
 
 ## Output Formats
